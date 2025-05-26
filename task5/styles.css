@@ -1,0 +1,249 @@
+/* Main Styles for User Authentication System */
+
+:root {
+    --primary-color: #4a6fa5;
+    --primary-dark: #334e7a;
+    --secondary-color: #6e9887;
+    --light-color: #f4f7f9;
+    --dark-color: #333;
+    --danger-color: #e74c3c;
+    --success-color: #2ecc71;
+    --border-radius: 4px;
+    --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin-left: 1rem;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Form Styles */
+  .form-container {
+    background-color: white;
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+  }
+  
+  h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  h3 {
+    color: var(--primary-color);
+    margin: 1rem 0;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  input[type="submit"],
+  button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  input[type="submit"]:hover,
+  button:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  /* Dashboard Styles */
+  .dashboard {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .user-welcome {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+  
+  .role-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 10px;
+  }
+  
+  .role-admin {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .role-editor {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  .role-user {
+    background-color: #aaa;
+    color: white;
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    margin-right: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .btn-danger {
+    background-color: var(--danger-color);
+  }
+  
+  .btn-danger:hover {
+    background-color: #c0392b;
+  }
+  
+  .btn-success {
+    background-color: var(--success-color);
+  }
+  
+  .btn-success:hover {
+    background-color: #27ae60;
+  }
+  
+  /* Messages */
+  .message {
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-radius: var(--border-radius);
+  }
+  
+  .message-error {
+    background-color: #fde2e2;
+    color: var(--danger-color);
+    border: 1px solid #f5c6cb;
+  }
+  
+  .message-success {
+    background-color: #d4edda;
+    color: var(--success-color);
+    border: 1px solid #c3e6cb;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+    }
+    
+    nav ul {
+      margin-top: 1rem;
+    }
+    
+    nav ul li {
+      margin: 0 0.5rem;
+    }
+  }
